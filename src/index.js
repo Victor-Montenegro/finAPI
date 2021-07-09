@@ -27,11 +27,23 @@ app.post(`/account`, (request,response)=>{
         id: uuid(),
         cpf,
         name,
-        statement: [],
+        statement: [{acao:"deposito",valor:2002.22}],
     })
 
-    return response.status(201).send("conta criada");
+    return response.status(201).json(customers);
 
-})
+});
 
-app.listen(3333)
+app.get(`/statement/:cpf`, (request,response)=>{
+
+    const { cpf } = request.params;
+
+    const customer = customers.find( 
+        custumer => custumer.cpf === cpf
+    );
+
+    return response.json(customer.statement);
+
+});
+
+app.listen(3333);
