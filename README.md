@@ -4,6 +4,21 @@
 
 ---
 
+## Instruções 
+    URL para acessar as routes: http://localhost:3333
+
+    route para criar uma conta: POST - http://localhost:3333/account
+        Ex.: Os dados devem ser passando via JSON no body
+        {
+            "name": "João",
+            "cpf": "333.333.333.33"
+        }
+    
+    route para lsitar o statement do cliente: GET - http://localhost:3000/statement/{cpf}
+        deve passar como route params o cpf do cliente
+        Ex.:
+            http://localhost:3000/statement/333.333.333.33
+
 ### Requisitos 
 
 - [ X ] Deve ser possivel criar uma conta
