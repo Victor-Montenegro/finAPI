@@ -17,7 +17,7 @@
 
 ## Regras de negócio
 
-- [ ] Não deve ser possivel cadastrar uma conta com CPF já existente
+- [ X ] Não deve ser possivel cadastrar uma conta com CPF já existente
 - [ ] Não deve ser possivel fazer depósito em uma conta não existente
 - [ ] Não deve ser possivel buscar extrato em uma conta não existente
 - [ ] Não deve ser possivel fazer saque em ua conta não existente
@@ -28,7 +28,10 @@
 # Victor Montenegro 
 
 ## Olá, tudo bem! :wave:
-    Eu sou João Victor Montenegro Rocha, mas pode me chamar de João. Atualmente desenvolvendo aplicações web com nodejs e sempre em busca de crescimento e aprimoramento profissional e pessoal. Estou disposto a trabalhar em um ambiente que proporcione conhecimento e crescimento profissional. Tenho como objetivo de me atualizar para novas tecnologias e poder ajudar a comunidade  e os novos developers.
+    Eu sou João Victor Montenegro Rocha, mas pode me chamar de João. Atualmente desenvolvendo aplicações web
+    com nodejs e sempre em busca de crescimento e aprimoramento profissional e pessoal. 
+    Estou disposto a trabalhar em um ambiente que proporcione conhecimento e crescimento profissional. Tenho como 
+    objetivo de me atualizar para novas tecnologias e poder ajudar a comunidade  e os novos developers.
 
  <br/> :purple_heart: Buscando colaborar com projetos no back-end, utilizando o frameWork nodejs.
  <br/> :blush: Com o que eu puder ajudar vou ajudar!

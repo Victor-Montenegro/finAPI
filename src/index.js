@@ -13,13 +13,25 @@ app.post(`/account`, (request,response)=>{
 
     const { cpf,name} = request.body;
 
-    const id = uuid();
+    const custumerAlreadyExists = customers.some( 
+        
+        (custumer) => custumer.cpf === cpf
+    );
+
+    if(custumerAlreadyExists){
+
+        return response.status(400).json({error: "custumer already exists!"});
+    }
 
     customers.push({
-        id,
+        id: uuid(),
         cpf,
         name,
         statement: [],
     })
 
+    return response.status(201).send("conta criada");
+
 })
+
+app.listen(3333)
