@@ -11,7 +11,6 @@ let customers = [];
 function verifyIfExistsAccountCPF(request, response, next){
 
     const { cpf } = request.headers;
-    console.log(cpf);
     const customer = customers.find(
         (customer) => customer.cpf === cpf 
     )
@@ -121,9 +120,11 @@ app.get(`/statement/date`, verifyIfExistsAccountCPF, (request,response)=>{
 
     const { customer } = request;
 
-    const dateForm = new date(date);
+    const dateForm = new Date(date + " 00:00");
 
-    return response.json({date:date,date2:dateForm});
+    const statement = customer.statement.filter( a => a.created_at.toDateString() === new Date(dateForm).toDateString());
+
+    return response.json(statement);
 });
 
 app.listen(3333);

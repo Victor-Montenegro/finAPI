@@ -50,6 +50,14 @@
         {
             "amount": 120.00
         }
+    
+    route para visualizar o extrato bancário do cliente por data: POST - http://localhost:3333/statement/date
+        deve passar o cpf pelo header
+        Ex.:
+        header
+        {
+            cpf: "333.333.333.33"
+        }
             
 
 ### Requisitos 
@@ -58,7 +66,7 @@
 - [ X ] Deve ser possivel buscar o extrato bancário do cliente
 - [ X ] Deve ser possivel realizar um depósito
 - [ X ] Deve ser possivel realizar um saque
-- [ ] Deve ser possivel busca o extrato bancário do cliente por data
+- [ X ] Deve ser possivel busca o extrato bancário do cliente por data
 - [ ] Deve ser possivel atualizar dados da conta do cliente
 - [ ] Deve ser possivel obter dados da conta do cliente
 - [ ] Deve ser possivel deletar uma conta
