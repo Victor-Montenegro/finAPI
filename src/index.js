@@ -10,8 +10,8 @@ let customers = [];
 
 function verifyIfExistsAccountCPF(request, response, next){
 
-    const { cpf } = request.headers
-
+    const { cpf } = request.headers;
+    console.log(cpf);
     const customer = customers.find(
         (customer) => customer.cpf === cpf 
     )
@@ -94,7 +94,7 @@ app.post(`/withdraw`, verifyIfExistsAccountCPF, (request,response)=>{
 
     const { amount } = request.body;
     
-    const { customer } = request
+    const { customer } = request;
 
     const balance = getBalance(customer.statement);
 
@@ -113,6 +113,17 @@ app.post(`/withdraw`, verifyIfExistsAccountCPF, (request,response)=>{
 
     return response.status(201).send();
 
-})
+});
+
+app.get(`/statement/date`, verifyIfExistsAccountCPF, (request,response)=>{
+
+    const { date } = request.query;
+
+    const { customer } = request;
+
+    const dateForm = new date(date);
+
+    return response.json({date:date,date2:dateForm});
+});
 
 app.listen(3333);
