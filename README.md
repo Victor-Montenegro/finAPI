@@ -9,16 +9,32 @@
 
     route para criar uma conta: POST - http://localhost:3333/account
         Ex.: Os dados devem ser passando via JSON no body
+        body
         {
             "name": "João",
             "cpf": "333.333.333.33"
         }
     
-    route para lsitar o statement do cliente: GET - http://localhost:3000/statement
+    route para consultar o statement do cliente: GET - http://localhost:3000/statement
         deve passar o cpf pelo header
         Ex.:
         header{
             cpf: "333.333.333.33"
+        }
+
+    route para criar uma conta: POST - http://localhost:3333/deposit
+        deve passar o cpf pelo header
+        Ex.:
+        header
+        {
+            cpf: "333.333.333.33"
+        }
+        
+        Ex.: Os dados devem ser passando via JSON no body
+        body
+        {
+            "description": "deposito joao",
+            "amount": 1203.00
         }
             
 
@@ -26,7 +42,7 @@
 
 - [ X ] Deve ser possivel criar uma conta
 - [ X ] Deve ser possivel buscar o extrato bancário do cliente
-- [ ] Deve ser possivel realizar um depósito
+- [ X ] Deve ser possivel realizar um depósito
 - [ ] Deve ser possivel realizar um saque
 - [ ] Deve ser possivel busca o extrato bancário do cliente por data
 - [ ] Deve ser possivel atualizar dados da conta do cliente
@@ -36,7 +52,7 @@
 ## Regras de negócio
 
 - [ X ] Não deve ser possivel cadastrar uma conta com CPF já existente
-- [ ] Não deve ser possivel fazer depósito em uma conta não existente
+- [ X ] Não deve ser possivel fazer depósito em uma conta não existente
 - [ X ] Não deve ser possivel buscar extrato em uma conta não existente
 - [ ] Não deve ser possivel fazer saque em ua conta não existente
 - [ ] Não deve ser possivel excluir uma conta não existente
