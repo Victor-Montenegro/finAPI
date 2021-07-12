@@ -80,6 +80,22 @@
         {
             "name": "victor"
         }
+    
+    route para remove um cliente: DELETE - http://localhost:3333/account
+        deve passar o cpf pelo header
+        Ex.:
+        header
+        {
+            cpf: "333.333.333.33"
+        }
+    
+    route para consultar o balance do cliente: GET - http://localhost:3333/balance
+        deve passar o cpf pelo header
+        Ex.:
+        header
+        {
+            cpf: "333.333.333.33"
+        }
             
 
 ### Requisitos 
@@ -91,7 +107,8 @@
 - [ X ] Deve ser possivel busca o extrato bancário do cliente por data
 - [ X ] Deve ser possivel atualizar dados da conta do cliente
 - [ X ] Deve ser possivel obter dados da conta do cliente
-- [ ] Deve ser possivel deletar uma conta
+- [ X ] Deve ser possivel deletar uma conta
+- [ X ] Deve ser possivel retornar o balance
 
 ## Regras de negócio
 
@@ -99,8 +116,10 @@
 - [ X ] Não deve ser possivel fazer depósito em uma conta não existente
 - [ X ] Não deve ser possivel buscar extrato em uma conta não existente
 - [ X ] Não deve ser possivel fazer saque em ua conta não existente
-- [ ] Não deve ser possivel excluir uma conta não existente
+- [ X ] Não deve ser possivel excluir uma conta não existente
 - [ X ] Não deve ser possivel fazer saque quando o saldo for insuficiente 
+- [ X ] Não deve ser possivel buscar o balance em uma conta não existente
+
 
 
 # Victor Montenegro 
