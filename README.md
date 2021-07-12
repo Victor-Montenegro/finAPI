@@ -51,12 +51,34 @@
             "amount": 120.00
         }
     
-    route para visualizar o extrato bancário do cliente por data: POST - http://localhost:3333/statement/date
+    route para visualizar o extrato bancário do cliente por data: GET - http://localhost:3333/statement/date
         deve passar o cpf pelo header
         Ex.:
         header
         {
             cpf: "333.333.333.33"
+        }
+    
+    route para visualizar um cliente: GET - http://localhost:3333/account
+        deve passar o cpf pelo header
+        Ex.:
+        header
+        {
+            cpf: "333.333.333.33"
+        }
+
+    route para atualizar o nome do cliente: PUT - http://localhost:3333/account
+        deve passar o cpf pelo header
+        Ex.:
+        header
+        {
+            cpf: "333.333.333.33"
+        }
+
+        Ex.: Os dados devem ser passando via JSON no body
+        body
+        {
+            "name": "victor"
         }
             
 
@@ -67,8 +89,8 @@
 - [ X ] Deve ser possivel realizar um depósito
 - [ X ] Deve ser possivel realizar um saque
 - [ X ] Deve ser possivel busca o extrato bancário do cliente por data
-- [ ] Deve ser possivel atualizar dados da conta do cliente
-- [ ] Deve ser possivel obter dados da conta do cliente
+- [ X ] Deve ser possivel atualizar dados da conta do cliente
+- [ X ] Deve ser possivel obter dados da conta do cliente
 - [ ] Deve ser possivel deletar uma conta
 
 ## Regras de negócio
