@@ -14,15 +14,18 @@
             "cpf": "333.333.333.33"
         }
     
-    route para lsitar o statement do cliente: GET - http://localhost:3000/statement/{cpf}
-        deve passar como route params o cpf do cliente
+    route para lsitar o statement do cliente: GET - http://localhost:3000/statement
+        deve passar o cpf pelo header
         Ex.:
-            http://localhost:3000/statement/333.333.333.33
+        header{
+            cpf: "333.333.333.33"
+        }
+            
 
 ### Requisitos 
 
 - [ X ] Deve ser possivel criar uma conta
-- [ ] Deve ser possivel buscar o extrato bancário do cliente
+- [ X ] Deve ser possivel buscar o extrato bancário do cliente
 - [ ] Deve ser possivel realizar um depósito
 - [ ] Deve ser possivel realizar um saque
 - [ ] Deve ser possivel busca o extrato bancário do cliente por data
@@ -34,7 +37,7 @@
 
 - [ X ] Não deve ser possivel cadastrar uma conta com CPF já existente
 - [ ] Não deve ser possivel fazer depósito em uma conta não existente
-- [ ] Não deve ser possivel buscar extrato em uma conta não existente
+- [ X ] Não deve ser possivel buscar extrato em uma conta não existente
 - [ ] Não deve ser possivel fazer saque em ua conta não existente
 - [ ] Não deve ser possivel excluir uma conta não existente
 - [ ] Não deve ser possivel fazer saque quando o saldo for insuficiente 
@@ -51,7 +54,7 @@
 
  <br/> :purple_heart: Buscando colaborar com projetos no back-end, utilizando o framework nodejs.
  <br/> :blush: Com o que eu puder ajudar vou ajudar!
- <br/> :computer: O que estou aprendendo: javaScript, MongoDB, MySQL, Postgres, nodejs/TypeScript.
+ <br/> :computer: O que estou aprendendo: javaScript, MongoDB, MySQL, PostgreSQL, nodejs/TypeScript.
  <br/> 💬  &nbsp; Sobre mim: Curto tecnologias,podCasts, games, seriados e animações. 
  <br/> :email: Entre em contato comigo: [![Linkedin Badge](https://img.shields.io/badge/-VictorMontenegro-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://https://www.linkedin.com/in/joao-victor-montenegro-595791194/)](https://www.linkedin.com/in/joao-victor-montenegro-595791194/) 
  [![Gmail Badge](https://img.shields.io/badge/-jvcmontenegro67@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=victor:jvcmontenegro67@gmail.com)](victor:jvcmontenegro67@gmail.com)

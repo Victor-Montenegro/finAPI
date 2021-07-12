@@ -6,8 +6,25 @@ const app = express();
 
 app.use(express.json());
 
-
 let customers = [];
+
+function verifyIfExistsAccountCPF(request, response, next){
+
+    const { cpf } = request.headers
+
+    const customer = customers.find(
+        (customer) => customer.cpf === cpf 
+    )
+
+    if(!customer){
+
+        return response.status(400).json({error: "custumer already exists!"});
+    }
+
+    request.customer = customer;
+
+    return next();
+}
 
 app.post(`/account`, (request,response)=>{
 
@@ -20,28 +37,22 @@ app.post(`/account`, (request,response)=>{
 
     if(custumerAlreadyExists){
 
-        return response.status(400).json({error: "custumer already exists!"});
     }
 
     customers.push({
         id: uuid(),
         cpf,
         name,
-        statement: [{acao:"deposito",valor:2002.22}],
+        statement: [],
     })
 
     return response.status(201).json(customers);
 
 });
 
-app.get(`/statement/:cpf`, (request,response)=>{
+app.get(`/statement`,verifyIfExistsAccountCPF, (request,response)=>{
 
-    const { cpf } = request.params;
-
-    const customer = customers.find( 
-        custumer => custumer.cpf === cpf
-    );
-
+    const { customer } = request;
     return response.json(customer.statement);
 
 });
