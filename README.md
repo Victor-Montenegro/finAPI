@@ -14,6 +14,7 @@
             "name": "João",
             "cpf": "333.333.333.33"
         }
+---
     
     route para consultar o statement do cliente: GET - http://localhost:3000/statement
         deve passar o cpf pelo header
@@ -21,6 +22,7 @@
         header{
             cpf: "333.333.333.33"
         }
+---
 
     route para realizar um deposito na conta: POST - http://localhost:3333/deposit
         deve passar o cpf pelo header
@@ -36,6 +38,7 @@
             "description": "deposito joao",
             "amount": 1203.00
         }
+---
     
     route para realizar um saque na conta: POST - http://localhost:3333/withdraw
         deve passar o cpf pelo header
@@ -50,6 +53,7 @@
         {
             "amount": 120.00
         }
+---
     
     route para visualizar o extrato bancário do cliente por data: GET - http://localhost:3333/statement/date
         deve passar o cpf pelo header
@@ -58,6 +62,7 @@
         {
             cpf: "333.333.333.33"
         }
+---
     
     route para visualizar um cliente: GET - http://localhost:3333/account
         deve passar o cpf pelo header
@@ -66,6 +71,7 @@
         {
             cpf: "333.333.333.33"
         }
+---
 
     route para atualizar o nome do cliente: PUT - http://localhost:3333/account
         deve passar o cpf pelo header
@@ -80,6 +86,7 @@
         {
             "name": "victor"
         }
+---
     
     route para remove um cliente: DELETE - http://localhost:3333/account
         deve passar o cpf pelo header
@@ -88,6 +95,7 @@
         {
             cpf: "333.333.333.33"
         }
+---
     
     route para consultar o balance do cliente: GET - http://localhost:3333/balance
         deve passar o cpf pelo header
