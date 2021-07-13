@@ -16,7 +16,7 @@
         }
 ---
     
-    route para consultar o statement do cliente: GET - http://localhost:3000/statement
+    route para consultar o statement do cliente: GET - http://localhost:3333/statement
         deve passar o cpf pelo header
         Ex.:
         header{
